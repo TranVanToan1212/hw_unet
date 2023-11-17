@@ -18,17 +18,18 @@ from pathlib import Path
 
 import wget
 
-parser = argparse.ArgumentParser()
+# parser = argparse.ArgumentParser()
 
-parser.add_argument('--path', type=Path, default='/kaggle/working/pretrained/unet_model.pth', help = 'model save path')
+# parser.add_argument('--path', type=Path, default='/kaggle/working/pretrained/unet_model.pth', help = 'model save path')
 
-args = parser.parse_args()
+# args = parser.parse_args()
 
 # url = 
 # wget.download(url, path)
 # '/k
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-pretrained_path = str(args.path)
+# pretrained_path = str(args.path)
+pretrained_path = '/kaggle/working/pretrained/unet_model.pth'
 # '/kaggle/input/checkpoint_path/unet_model.pth'
 url = 'https://drive.google.com/file/d/1_ZLyCf6dl1XwY2CVUw7um75_BkaVYvf1/view?usp=sharing'
 wget.download(url, pretrained_path)
