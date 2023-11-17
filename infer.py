@@ -28,7 +28,7 @@ args = parser.parse_args()
 # wget.download(url, path)
 # '/k
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-pretrained_path = args.path
+pretrained_path = str(args.path)
 # '/kaggle/input/checkpoint_path/unet_model.pth'
 url = 'https://drive.google.com/file/d/1_ZLyCf6dl1XwY2CVUw7um75_BkaVYvf1/view?usp=sharing'
 wget.download(url, pretrained_path)
