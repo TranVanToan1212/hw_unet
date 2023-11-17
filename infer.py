@@ -72,7 +72,7 @@ model.load_state_dict(new_state_dict)
 model = nn.DataParallel(model)
 model.to(device)
 # summary(model, (3, 224, 224))
-
+print('model loaded')
 transform = Compose([
     Resize((224,224),
         interpolation = InterpolationMode.BICUBIC, 
