@@ -15,7 +15,7 @@ from torchvision.transforms import Resize, PILToTensor, ToPILImage, Compose, Int
 import albumentations as A
 import argparse
 from pathlib import Path
-
+import gdown
 import wget
 
 parser = argparse.ArgumentParser()
@@ -29,13 +29,18 @@ args = parser.parse_args()
 # '/k
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 pretrained_path = str(args.path)
-print(pretrained_path)
+pretrained_directory = '/'.join(pretrained_path.split('/')[:-1])
+if not os.path.exists(pretrained_directory):
+    os.mkdir(pretrained_directory)
+# print(pretrained_path)
 # [:-12]
 # pretrained_path = '/kaggle/working/pretrained/unet_model.pth'
 # '/kaggle/input/checkpoint_path/unet_model.pth'
-url = 'https://drive.google.com/file/d/1_ZLyCf6dl1XwY2CVUw7um75_BkaVYvf1/view?usp=sharing'
-wget.download(url, pretrained_path)
+# url = 'https://drive.google.com/file/d/1_ZLyCf6dl1XwY2CVUw7um75_BkaVYvf1/view?usp=sharing'
+# wget.download(url, pretrained_path)
 # pretrained_path = args.path
+url = 'https://drive.google.com/uc?id=1_ZLyCf6dl1XwY2CVUw7um75_BkaVYvf1'
+gdown.download(url, pretrained_path)
 
 ENCODER = 'resnet152'
 ENCODER_WEIGHTS = 'imagenet'
