@@ -14,11 +14,13 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision.transforms import Resize, PILToTensor, ToPILImage, Compose, InterpolationMode, Normalize
 import albumentations as A
 import argparse
+from pathlib import Path
+
 import wget
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--path', type=str, default='/kaggle/input/pretrained/unet_model.pth', help = 'model save path')
+parser.add_argument('--path', type=Path, default='/kaggle/working/pretrained/unet_model.pth', help = 'model save path')
 
 args = parser.parse_args()
 
