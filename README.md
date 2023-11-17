@@ -12,7 +12,7 @@ Do these before cloning the repo:
 !pip install gdown
 ```
 
-Clone from `git` (here I'm assuming the cloned folder name is also `hw_unet`:
+`clone` from `git`, `cd`, and run `infer.py` (here I'm assuming the cloned folder name is also `hw_unet`):
 
 ```
 !git init
