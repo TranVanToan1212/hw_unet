@@ -16,7 +16,7 @@ import albumentations as A
 import argparse
 from pathlib import Path
 import gdown
-import wget
+# import wget
 
 parser = argparse.ArgumentParser()
 
