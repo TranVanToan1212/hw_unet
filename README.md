@@ -15,6 +15,6 @@ Do these before cloning the repo:
 `cd` to the cloned folder and run `infer.py`
 There is 1 argument for the file: Choose your `path` to save the pretrained model, or let it save by default.
 
-`output.csv` is in `working` folder
+`output.csv` is in `working` folder.
 
 
